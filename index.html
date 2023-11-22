@@ -1,1 +1,29 @@
-console.log("hola mundo")
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Inicio de Sesión</title>
+</head>
+<body>
+    <div class="login-container">
+        <img class="background-image" src="fondo principal.jpg" alt="Fondo">
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            <form onsubmit="iniciarSesion(); return false;">
+                <label for="username">Usuario (Correo Electrónico):</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <div id="contenedor-mensajes"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
