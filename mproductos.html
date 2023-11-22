@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesINICIO.css">
+    <title>Tienda Veterinaria</title>
+</head>
+<body>
+    <section class="header-section">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo de la Tienda Veterinaria">
+        </div>
+
+        <nav class="navigation-menu">
+            <ul>
+                <li><a href="minicio.html">Inicio</a></li>
+                <li><a href="mproductos.html">Productos</a></li>
+                <li><a href="mservicios.html">Servicios</a></li>
+                <li><a href="mcontactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-filters">
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Buscar productos...">
+                <button type="button" onclick="buscarProducto()">Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <aside class="filter-section">
+            <h2>Filtros</h2>
+            <div class="filter-container">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#" onclick="mostrarProductos('Comida')" class="selected-category" data-categoria="Comida">Comida</a></li>
+                    <li><a href="#" onclick="mostrarProductos('Juguetes')" data-categoria="Juguetes">Juguetes</a></li>
+                    <li><a href="#" onclick="mostrarProductos('Accesorios')" data-categoria="Accesorios">Accesorios</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </ul>
+            </div>
+
+            <div class="filter-container">
+                <h3>Precio</h3>
+                <label for="min-price">Mínimo:</label>
+                <input type="number" id="min-price" min="0" step="1">
+                <label for="max-price">Máximo:</label>
+                <input type="number" id="max-price" min="0" step="1">
+                <button type="button" onclick="filtrarPorPrecio()">Filtrar por precio</button>
+            </div>
+        </aside>
+
+        <section class="product-list" id="productList">
+            <!-- Aquí se mostrarán los productos dinámicamente -->
+        </section>
+
+        <section class="product-details" id="productDetails">
+            <!-- Aquí se mostrarán los detalles del producto al hacer clic -->
+            <button onclick="ocultarDetallesProducto()">Cerrar</button>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
