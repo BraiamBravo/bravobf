@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-section {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 50px;
+}
+
+.navigation-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation-menu li {
+    margin-right: 20px;
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.search-filters {
+    display: flex;
+    align-items: center;
+}
+
+.search-filter input {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.search-filter button,
+.price-filter button {
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.price-filter label,
+.price-filter input {
+    margin-right: 10px;
+}
+
+.main-content {
+    display: flex;
+}
+
+.filter-section {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.filter-container h3 {
+    color: #4CAF50;
+}
+
+.filter-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter-container li {
+    margin-bottom: 10px;
+}
+
+.product-list {
+    margin: 20px;
+}
+
+.product-list h2,
+.product-details h3 {
+    color: #4CAF50;
+}
+
+.product-list ul,
+.product-details p {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-list li,
+.product-details {
+    margin-bottom: 10px;
+}
+
+.selected-category::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+    border-radius: 50%;
+}
+
+#productDetails {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    width: 301px; /* Puedes ajustar este valor según sea necesario */
+}
+#productDetails {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar contenido */
+}
+
+#productDetails img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Agregar un borde para resaltar la imagen */
+}
+
+#productDetails p {
+    color: #333;
+}
