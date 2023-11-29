@@ -44,10 +44,28 @@ function iniciarSesion() {
     window.location.href = "inicio.html";
 }
 
+function iniciarSesion() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // promesa de 3 segundos
+    const delayPromise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, 3000); 
+    });
+
+    delayPromise.then(() => {
+        
+        mostrarMensaje("Inicio de sesión exitoso: " + username, "exito");
+        window.location.href = "minicio.html";
+    });
+}
+
 const productosPorCategoria = {
     'Comida': [
         { nombre: 'Comida para Gatos', precio: 10, imagen: "147115.jpg", descripcion: 'Deliciosa comida para gatos.' },
-        { nombre: 'Comida para Perros', precio: 15, imagen: 'comida de perro.jpg', descripcion: 'Nutritiva comida para perros.' }
+        { nombre: 'Alimento seco (croquetas o pienso) para perro', precio: 15, imagen: 'comida de perro.jpg', descripcion: 'Nutritiva comida para perros.' }
     ],
     'Juguetes': [
         { nombre: 'Juguete para Gatos', precio: 5, imagen: 'juguete de gato.jpg', descripcion: 'Divertido juguete para gatos.' },
@@ -131,5 +149,29 @@ function filtrarPorPrecio() {
     productList.innerHTML = `<h2>Productos Filtrados por Precio</h2><ul>${listaProductosHTML}</ul>`;
 }
 
+const serviciosInfo = {
 
+    'Consulta veterinaria': 'Ofrecemos servicios de consulta veterinaria para revisar la salud general de tus mascotas. Nuestros veterinarios altamente calificados están aquí para ayudar.',
+    'Vacunación': 'Contamos con programas de vacunación para mantener a tus mascotas saludables y protegidas contra enfermedades comunes.',
+    'Cirugía': 'Realizamos procedimientos quirúrgicos con cuidado y profesionalismo para abordar diversas necesidades de salud en tus mascotas.'
+    
+};
 
+function mostrarInfoServicio(servicio) {
+    const infoServicio = document.getElementById('infoServicio');
+    infoServicio.textContent = serviciosInfo[servicio];
+}
+
+function enviarFormulario() {
+   
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    
+
+    // Mostrar un mensaje de eviado exitoso
+    const respuestaFormulario = document.getElementById('respuestaFormulario');
+    respuestaFormulario.innerHTML = `¡Gracias por tu mensaje, ${nombre}! Nos pondremos en contacto contigo pronto.`;
+    respuestaFormulario.style.color = '#4caf50'; 
+}
